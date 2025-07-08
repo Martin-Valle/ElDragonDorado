@@ -1,0 +1,75 @@
+body.login-body {
+  background: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-register {
+  width: 100%;
+  background-color: #ec632c;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-register:hover {
+  background-color: #d95b26;
+}
+
+.bottom-text {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.bottom-text a {
+  color: #ec632c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.input-error {
+  color: red;
+  font-size: 0.85em;
+  min-height: 1.2em;
+  margin-bottom: 0.5rem;
+}
+
+/* Mensaje de éxito */
+.input-success {
+  color: green;
+  font-size: 0.85em;
+  min-height: 1.2em;
+  margin-bottom: 0.5rem;
+}

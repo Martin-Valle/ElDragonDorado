@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú · El Dragón Dorado</title>
+
+  <!-- 1) Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- 2) Responsive -->
+  <link rel="stylesheet" href="responsive.css" />
+  <!-- 3) Estilos específicos de Menú -->
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🍜 El Dragón Dorado</div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <!-- Menú móvil -->
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menú móvil">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html" class="activo">Menú</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Toggle Tema -->
+      <button id="btnToggleTema" class="btn-tema" aria-label="Cambiar tema">🌙</button>
+      <!-- Carrito -->
+      <a href="carrito.html" class="cart-icon" aria-label="Ver carrito">
+        🛒 <span id="cart-count">0</span>
+      </a>
+      <!-- Auth -->
+      <div class="auth-buttons"></div>
+    </div>
+  </nav>
+
+  <!-- MAIN: Layout + Sidebar + Contenido -->
+  <main class="layout">
+    <!-- Sidebar de categorías -->
+    <aside class="sidebar">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="#combinaciones">Combinaciones</a></li>
+        <li><a href="#entradas">Entradas</a></li>
+        <li><a href="#sopas">Sopas</a></li>
+        <li><a href="#arroz">Arroz</a></li>
+        <li><a href="#bebidas">Bebidas</a></li>
+        <li><a href="#postres">Postres</a></li>
+        <li><a href="#extras">Extras</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido de cada sección -->
+    <section class="menu-content">
+      <section id="combinaciones" class="menu-section">
+        <h2>Combinaciones</h2>
+        <div class="platos-grid" id="grid-combinaciones"></div>
+      </section>
+      <section id="entradas" class="menu-section">
+        <h2>Entradas</h2>
+        <div class="platos-grid" id="grid-entradas"></div>
+      </section>
+      <section id="sopas" class="menu-section">
+        <h2>Sopas</h2>
+        <div class="platos-grid" id="grid-sopas"></div>
+      </section>
+      <section id="arroz" class="menu-section">
+        <h2>Arroz</h2>
+        <div class="platos-grid" id="grid-arroz"></div>
+      </section>
+      <section id="bebidas" class="menu-section">
+        <h2>Bebidas</h2>
+        <div class="platos-grid" id="grid-bebidas"></div>
+      </section>
+      <section id="postres" class="menu-section">
+        <h2>Postres</h2>
+        <div class="platos-grid" id="grid-postres"></div>
+      </section>
+      <section id="extras" class="menu-section">
+        <h2>Extras</h2>
+        <div class="platos-grid" id="grid-extras"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Toast notifications -->
+  <div id="toast-container"></div>
+
+  <!-- Script del módulo (incluye tema, menú móvil y Supabase) -->
+  <script type="module" src="menu.js"></script>
+</body>
+</html>

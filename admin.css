@@ -1,0 +1,259 @@
+/* Oculta elementos */
+.hidden {
+  display: none !important;
+}
+
+/* Layout general */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav button {
+  margin-left: 0.5rem;
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+header nav button:hover {
+  background: #777;
+}
+main {
+  flex: 1;
+  padding: 1rem;
+}
+.admin-section {
+  margin-top: 1rem;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+th {
+  background: #f5f5f5;
+}
+button.action {
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+/* Modales */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modal:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  width: 300px;
+}
+.modal-content label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  margin-top: 0.3rem;
+  box-sizing: border-box;
+}
+.modal-actions {
+  text-align: right;
+  margin-top: 1rem;
+}
+.modal-actions button {
+  margin-left: 0.5rem;
+}
+
+/* Detalles */
+.details-box {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;       /* aumenta de 360px a 600px */
+  width: 100%;            /* que ocupe todo hasta ese límite */
+  max-height: 90vh;       /* que no sobrepase el 90% de la ventana */
+  overflow-y: auto;       /* scroll si es necesario */
+}
+
+.details-box img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+/* ... tu CSS existente ... */
+
+/* tabla detalle factura */
+#tbl-inv-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+#tbl-inv-details th,
+#tbl-inv-details td {
+  border: 1px solid #ccc;
+  padding: 0.3rem;
+  text-align: left;
+}
+/* Oculta y deshabilita interacción */
+.hidden {
+  display: none !important;
+  pointer-events: none;
+}
+
+/* Layout general */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav button {
+  margin-left: 0.5rem;
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+header nav button:hover {
+  background: #777;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 1rem;
+}
+.admin-section {
+  margin-top: 1rem;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+button.action {
+  margin-right: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+.modal:not(.hidden) {
+  opacity: 1;
+}
+.modal-content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  min-width: 300px;
+}
+
+/* Form en modal */
+.modal form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.modal form input,
+.modal form select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.2rem;
+}
+
+/* Botones del modal */
+.modal .modal-actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+.modal .modal-actions button {
+  margin-left: 0.5rem;
+}
+
+/* Details box */
+.details-box {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.details-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Tabla detalle factura */
+#tbl-inv-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+#tbl-inv-details th,
+#tbl-inv-details td {
+  border: 1px solid #ccc;
+  padding: 0.3rem;
+}

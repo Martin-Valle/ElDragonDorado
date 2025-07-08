@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicia Sesión · El Dragón Dorado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="login.css">
+  <script type="module" src="login.js" defer></script>
+</head>
+<body class="login-body">
+  <div class="login-wrapper">
+    <a class="back-arrow" href="index.html">← Atrás</a>
+    <div class="form-container">
+      <h2>Ingresa a tu cuenta</h2>
+      
+      <!-- Mensaje de error -->
+      <p id="msgError" class="msg-error"></p>
+      
+      <form id="loginForm">
+        <input type="email" id="correo" placeholder="Correo electrónico" required>
+        <input type="password" id="clave" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Iniciar Sesión</button>
+      </form>
+      
+      <p class="bottom-text">
+        ¿Aún no tienes cuenta?
+        <a href="registro.html">Crear cuenta</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

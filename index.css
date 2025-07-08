@@ -1,0 +1,479 @@
+/* index.css */
+
+/* ============================
+   RESET & BASE
+   ============================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f2e9; /* crema suave */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+header {
+  background-color: #7b1e1e;
+  color: #ffd700;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Serif TC', serif;
+  border-bottom: 4px solid #eac100;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ============================
+   NAVBAR
+   ============================ */
+.navbar {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  border-top: 4px solid #eac100;
+  border-bottom: 4px solid #eac100;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.nav-links a.activo,
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.nav-links a.activo::after,
+.nav-links a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: #eac100;
+  border-radius: 2px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-tema {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.cart-icon {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.cart-count {
+  font-weight: bold;
+  margin-left: 0.25rem;
+}
+
+/* ============================
+   HERO BANNER
+   ============================ */
+.hero-banner {
+  background-color: #7b1e1e;
+  color: #fff8dc;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-banner .texto-izquierda {
+  max-width: 600px;
+}
+
+.hero-banner .etiqueta {
+  font-style: italic;
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.hero-banner .titulo-banner {
+  font-family: 'Shanghai', serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0.5rem 0;
+}
+
+.hero-banner .descripcion-banner {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-banner .boton-pizarra {
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.hero-banner .boton-pizarra:hover {
+  background: #ffd700;
+  color: #7b1e1e;
+  transform: scale(1.05);
+}
+/* ============================
+   SOBRE NOSOTROS (mejora layout)
+   ============================ */
+.about {
+  background-color: #fbf7f0;
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;   /* texto más ancho que imagen */
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.titulo-about {
+  font-family: 'Shanghai', serif;
+  font-size: 2.5rem;
+  color: #b22222;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.about-img {
+  /* forzamos centrado y un max-width razonable */
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 400px;        /* no crece demasiado */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* ============================
+   HORARIO DE ATENCIÓN
+   ============================ */
+.horario-atencion {
+  background-color: #7b1e1e;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.titulo-horario {
+  font-family: 'Shanghai', serif;
+  font-size: 2.8rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+}
+
+.card-horario {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  color: #333;
+}
+
+.card-horario .fila {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+.card-horario hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+}
+
+.card-horario .subtitulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #7b1e1e;
+  margin-top: 1.5rem;
+}
+
+/* ============================
+   ENTREGA A DOMICILIO
+   ============================ */
+.entrega-info {
+  background-color: #fbf7f0;
+  padding: 4rem 2rem;
+}
+
+.entrega-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  color: #333;
+}
+
+.mapa-entrega,
+.info-entrega {
+  flex: 1 1 300px;
+}
+
+.mapa-entrega iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-entrega h2 {
+  font-family: 'Shanghai', serif;
+  font-size: 2rem;
+  color: #7b1e1e;
+  margin-bottom: 1rem;
+}
+
+.info-entrega p {
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer-principal {
+  background: #162b3a;
+  color: #ccc;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-top: 1px solid #1e3d4d;
+  padding-top: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+}
+
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-politicas {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.acciones-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acciones-footer .btn-menu {
+  background: #ec6b2e;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.acciones-footer .btn-menu:hover {
+  background: #d45a1d;
+}
+
+/* ============================
+   BOTORES DE SESIÓN
+   ============================ */
+.btn-login,
+.btn-logout {
+  background: #c82333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-size: 0.9rem;
+}
+
+.btn-login:hover,
+.btn-logout:hover {
+  background: #a71d2a;
+  transform: translateY(-1px);
+}
+
+.usuario-nombre {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ============================
+   MODO OSCURO / CLARO
+   ============================ */
+/* Tema claro (por defecto) */
+body {
+  background: #f8f2e9;
+  color: #333;
+}
+
+/* Tema oscuro */
+body.dark-mode {
+  background: #181818;
+  color: #ddd;
+}
+
+body.dark-mode header {
+  background: #2c2c2c;
+}
+
+body.dark-mode header .logo {
+  color: #ffd700;
+}
+
+body.dark-mode .navbar {
+  background: #242424;
+}
+
+body.dark-mode .nav-links a {
+  color: #ddd;
+}
+
+body.dark-mode .nav-links a.activo,
+body.dark-mode .nav-links a:hover {
+  color: #ffd700;
+}
+
+body.dark-mode .hero-banner,
+body.dark-mode .about,
+body.dark-mode .horario-atencion,
+body.dark-mode .entrega-info {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .hero-banner .descripcion-banner,
+body.dark-mode .about-text p,
+body.dark-mode .info-entrega p {
+  color: #ccc;
+}
+
+body.dark-mode .card-horario,
+body.dark-mode .entrega-container {
+  background: #2a2a2a;
+}
+
+body.dark-mode .card-horario .fila div,
+body.dark-mode .info-entrega h2 {
+  color: #ddd;
+}
+
+body.dark-mode .btn-login,
+body.dark-mode .btn-logout {
+  background: #6c0d1e;
+}
+
+body.dark-mode .btn-login:hover,
+body.dark-mode .btn-logout:hover {
+  background: #58121a;
+}
+
+/* End of index.css */

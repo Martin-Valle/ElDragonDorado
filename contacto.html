@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - El Dragón Dorado</title>
+
+  <!-- Estilos base y responsivos -->
+  <link rel="stylesheet" href="contacto.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- Tipografía e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🍜 El Dragón Dorado</div>
+  </header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menú">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="menu.html">Menú</a></li>
+    <li><a href="contacto.html" class="activo">Contacto</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button id="btnToggleTema" class="btn-tema" aria-label="Cambiar tema">
+      🌙
+    </button>
+    <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">(0)</span>
+    </a>
+  </div>
+
+  <div class="auth-buttons"></div>
+</nav>
+
+
+
+  <!-- MAIN -->
+  <main>
+    <!-- CONTACTO -->
+    <section class="contacto-wrap">
+      <h2>Contáctenos</h2>
+      <p>📍 Marina de Jesús e Italia, Quito 170519, Ecuador</p>
+      <p>📞 +593 97 872 5058</p>
+      <iframe
+        src="https://www.google.com/maps?q=Marina+de+Jes%C3%BAs+e+Italia,+Quito,+Ecuador&output=embed"
+        width="100%" height="250" frameborder="0" style="border-radius:8px;" allowfullscreen=""
+        loading="lazy"></iframe>
+    </section>
+
+    <!-- VÍDEO -->
+    <section class="video-section">
+      <h2>🎬 Nuestra cocina en acción</h2>
+      <div class="reproductor-wrap">
+        <video id="miVideo" preload="metadata" poster="poster.jpg">
+          <source src="video-cocina.mp4" type="video/mp4">
+          Tu navegador no soporta este vídeo.
+        </video>
+        <div class="controles-video">
+          <button id="btnPlay" class="icon-play" title="Play/Pause"></button>
+          <button id="btnMute" class="icon-volume" title="Silenciar/Activar"></button>
+          <input id="volumen" type="range" min="0" max="1" step="0.01" value="1">
+          <div id="barra"><div id="progreso"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIO -->
+    <section class="horario-wrap">
+      <h3>Horario De Atención</h3>
+      <hr>
+      <div class="horario-cajas">
+        <div class="horario-box">
+          <strong>Lunes - Sábado:</strong><br>
+          10:30 a.m. - 08:00 p.m.<br>
+          <strong>Domingo:</strong><br>
+          10:30 a.m. - 05:00 p.m.
+        </div>
+        <div class="horario-box">
+          <strong>🛍️ Servicio de recogida</strong><br>
+          L–S: 10:30–07:45 p.m.<br>
+          D: 10:30–05:00 p.m.
+        </div>
+        <div class="horario-box">
+          <strong>🛵 Servicio de entrega</strong><br>
+          L–S: 10:30–07:00 p.m.<br>
+          D: 10:30–04:30 p.m.
+        </div>
+        <div class="horario-box">
+          <strong>🍽️ Comer en restaurante</strong><br>
+          L–S: 10:30–07:45 p.m.<br>
+          D: 10:30–04:45 p.m.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-principal">
+    <div class="footer-top">
+      <div class="footer-col">
+        <select><option>🌐 Español</option></select>
+        <div class="footer-politicas">
+          <a href="#">Política de privacidad</a> ·
+          <a href="#">Términos del servicio</a> ·
+          <a href="#">Cambios en la política de cookies</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>📍 Contáctenos</h4>
+        <p>Marina de Jesús e Italia, Quito 170519, Ecuador</p>
+        <p>📞 +593 958 737 330</p>
+      </div>
+      <div class="footer-col">
+        <h4>🔗 Enlaces</h4>
+        <p><a href="menu.html">Carta</a></p>
+        <p><a href="contacto.html">Contáctenos</a></p>
+      </div>
+      <div class="footer-col acciones-footer">
+        <button class="btn-menu" onclick="location.href='menu.html'">Ver el MENÚ y PEDIR</button>
+      </div>
+    </div> 
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="supabase-client.js" defer></script>
+  <script src="contacto.js" defer></script>
+<script src="menu.js" type="module" defer></script>
+</body>
+</html>

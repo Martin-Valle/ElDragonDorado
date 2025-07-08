@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Dragón Dorado</title>
+
+  <!-- Estilos base y responsivos -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!-- Tipografía e iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🍜 El Dragón Dorado</div>
+  </header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menú">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="activo">Inicio</a></li>
+    <li><a href="menu.html">Menú</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button id="btnToggleTema" class="btn-tema" aria-label="Cambiar tema">🌙</button>
+    <!-- Cambiamos class="cart-count" por id="cart-count" -->
+    <a href="carrito.html" class="cart-icon">
+      🛒 <span id="cart-count">(0)</span>
+    </a>
+  </div>
+
+  <div class="auth-buttons"></div>
+</nav>
+
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO -->
+    <section class="hero-banner">
+      <div class="texto-izquierda">
+        <h3 class="etiqueta">Sabores que Conectan</h3>
+        <h1 class="titulo-banner">
+          Comida Oriental con<br>
+          Corazón Ecuatoriano
+        </h1>
+        <p class="descripcion-banner">
+          Descubre el equilibrio perfecto entre tradición asiática y sazón ecuatoriana. Platos que te hacen volver.
+        </p>
+        <a href="menu.html" class="boton-pizarra">🍜 Descubre Nuestros Platos</a>
+      </div>
+      <div class="imagen-derecha">
+        <img src="https://i.pinimg.com/736x/10/cf/ff/10cfff809a05e4b7f48b6395d2cf76c0.jpg"
+             alt="Dragón Dorado" />
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2 class="titulo-about">☯ Sobre Nosotros ☯</h2>
+          <p>En <strong>El Dragón Dorado</strong> nacimos en 2020 con la pasión de fusionar lo mejor de la cocina china y los sabores tradicionales ecuatorianos. Nuestro chef, Martín Li, creció entre wok y arroz, perfeccionando recetas familiares antes de aterrizar en Quito para compartirlas.</p>
+          <p>Nuestra misión es ofrecerte platos auténticos preparados con ingredientes locales frescos: desde verduras de la Sierra hasta especias de Asia. Cada bocado busca transportarte a un viaje de aromas y texturas inéditas.</p>
+          <ul class="about-list">
+            <li>🌿 Proveedores locales</li>
+            <li>♻️ Envases biodegradables</li>
+            <li>🍽️ Cero desperdicio en cocina</li>
+          </ul>
+        </div>
+        <div class="about-img">
+          <img src="https://images.ctfassets.net/pdf29us7flmy/2PZZo73M47blDXAAJ6uhf9/fba9d38a7d29a64d72c31c3f9915a6cd/GettyImages-143922758_optimized.jpg?w=1440&q=100&fm=avif"
+               alt="Nuestro equipo en la cocina" />
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIO DE ATENCIÓN -->
+    <section class="horario-atencion">
+      <h2 class="titulo-horario">🕐 Horario de Atención</h2>
+      <div class="card-horario">
+        <div class="fila">
+          <div>Lunes - Sábado</div>
+          <div>10:30 a. m. – 08:00 p. m.</div>
+        </div>
+        <div class="fila">
+          <div>Domingo</div>
+          <div>10:30 a. m. – 05:00 p. m.</div>
+        </div>
+        <hr>
+        <div class="subtitulo"><i class="fas fa-store"></i> Servicio de recogida</div>
+        <div class="fila">
+          <div>Lunes - Sábado</div>
+          <div>10:30 a. m. – 07:55 p. m.</div>
+        </div>
+        <div class="fila">
+          <div>Domingo</div>
+          <div>10:30 a. m. – 05:00 p. m.</div>
+        </div>
+        <hr>
+        <div class="subtitulo"><i class="fas fa-motorcycle"></i> Servicio de entrega</div>
+        <div class="fila">
+          <div>Lunes - Sábado</div>
+          <div>10:30 a. m. – 07:00 p. m.</div>
+        </div>
+        <div class="fila">
+          <div>Domingo</div>
+          <div>10:30 a. m. – 04:30 p. m.</div>
+        </div>
+        <hr>
+        <div class="subtitulo"><i class="fas fa-utensils"></i> Cenar en restaurante</div>
+        <div class="fila">
+          <div>Lunes - Sábado</div>
+          <div>10:30 a. m. – 07:45 p. m.</div>
+        </div>
+        <div class="fila">
+          <div>Domingo</div>
+          <div>10:30 a. m. – 04:45 p. m.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTREGA A DOMICILIO -->
+    <section class="entrega-info">
+      <div class="entrega-container">
+        <div class="mapa-entrega">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.172143790302!2d-78.51331791284179!3d-0.20397999999999983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a14584a8fb5%3A0xc6ca747b83a6113f!2sChifa%20WEI%20HAI%20WEI!5e0!3m2!1ses-419!2sec!4v1748967319800!5m2!1ses-419!2sec"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="info-entrega">
+          <h2>Entrega De Comida En Quito</h2>
+          <p>¿Busca comida a domicilio cerca? No todo el mundo sabe o tiene el tiempo para preparar buena comida.</p>
+          <p>Cuando quiera que le traigan la comida como a un rey, entonces el servicio a domicilio de El Dragón Dorado será su mejor opción.</p>
+          <p>Sólo tiene que seleccionar "a domicilio" al pagar; esperamos que aprecie nuestro servicio de entrega a domicilio.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-principal">
+    <div class="footer-top">
+      <div class="footer-col">
+        <select>
+          <option>🌐 Español</option>
+        </select>
+        <div class="footer-politicas">
+          <a href="#">Política de privacidad</a> ·
+          <a href="#">Términos del servicio</a> ·
+          <a href="#">Cambios en la política de cookies</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>📍 Contáctenos</h4>
+        <p>Marina de Jesús e Italia, Quito 170519, Ecuador</p>
+        <p>📞 +593 97 872 5058</p>
+      </div>
+      <div class="footer-col">
+        <h4>🔗 Enlaces</h4>
+        <p><a href="menu.html">Carta</a></p>
+        <p><a href="contacto.html">Contáctenos</a></p>
+      </div>
+      <div class="footer-col acciones-footer">
+        <button class="btn-menu" onclick="location.href='menu.html'">Ver el MENÚ y PEDIR</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <!-- SCRIPTS -->
+  <script src="menu.js" type="module" defer></script>
+  <script src="index.js" type="module" defer></script>
+
+</body>
+</html>

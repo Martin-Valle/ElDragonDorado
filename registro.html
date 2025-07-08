@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro · El Dragón Dorado</title>
+  <link rel="stylesheet" href="registro.css" />
+  <style>
+    /* Sólo un extra rápido para que veas la diferencia */
+    .input-error { color: #c00; margin-top: 0.5rem; }
+    .input-success { color: #080; margin-top: 0.5rem; }
+  </style>
+</head>
+<body class="login-body">
+
+  <div class="form-container">
+    <h2>Crear cuenta</h2>
+
+    <form id="registroForm" novalidate>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre completo"
+        required
+        pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,}$"
+        title="Debe tener al menos 3 letras (solo letras y espacios)."
+      />
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Correo electrónico"
+        required
+        pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+        title="Debe ser un correo válido (incluye un punto tras la @)."
+      />
+
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Teléfono (10 dígitos)"
+        required
+        pattern="^\d{10}$"
+        title="Debe contener exactamente 10 dígitos numéricos."
+      />
+
+      <input
+        type="password"
+        id="contrasena"
+        name="contrasena"
+        placeholder="Contraseña"
+        required
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+        title="Mínimo 8 caracteres, una mayúscula, una minúscula, un número y un símbolo"
+      />
+
+      <input
+        type="password"
+        id="confirmarContrasena"
+        name="confirmarContrasena"
+        placeholder="Confirmar contraseña"
+        required
+      />
+
+      <!-- Mensajes -->
+      <p id="errorMsg" class="input-error" aria-live="polite"></p>
+      <p id="successMsg" class="input-success" aria-live="polite"></p>
+
+      <button type="submit" class="btn-register">Registrarse</button>
+    </form>
+
+    <div class="bottom-text">
+      ← ¿Ya tienes cuenta?
+      <a href="login.html">Iniciar sesión</a>
+    </div>
+  </div>
+
+  <script type="module" src="registro.js"></script>
+</body>
+</html>

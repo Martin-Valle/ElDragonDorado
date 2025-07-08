@@ -1,0 +1,355 @@
+/* RESET & BASE */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+header {
+  background: #7b1e1e;
+  color: #ffd700;
+  padding: 15px;
+  font-size: 1.8rem;
+  font-family: 'Noto Serif TC', serif;
+  border-bottom: 4px solid #eac100;
+}
+.logo { display: inline-block; }
+
+/* NAVBAR */
+.navbar {
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  border-top: 4px solid #eac100;
+  border-bottom: 4px solid #eac100;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+.nav-links a.activo,
+.nav-links a:hover {
+  color: #ffd700;
+}
+.nav-links a.activo::after,
+.nav-links a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #eac100;
+  border-radius: 2px;
+}
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* HAMBURGER TOGGLE */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* BUTTONS */
+.btn-tema,
+.cart-icon,
+#cart-count {
+  font-size: 1.2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.auth-buttons .btn-login,
+.auth-buttons .btn-logout,
+.btn-logout {
+  background: #c82333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+.auth-buttons .btn-login:hover,
+.auth-buttons .btn-logout:hover,
+.btn-logout:hover {
+  background: #a71d2a;
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* LAYOUT GENERAL DEL MENÚ */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* SIDEBAR DE CATEGORÍAS (STICKY) */
+.sidebar {
+  width: 200px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px; /* ajusta a altura de header + navbar */
+}
+.sidebar h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+.sidebar ul { list-style: none; }
+.sidebar li { margin: 10px 0; }
+.sidebar a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  display: block;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  color: #e74c3c;
+}
+
+/* CONTENIDO PRINCIPAL */
+.menu-content {
+  flex-grow: 1;
+}
+
+/* SECCIONES DE MENÚ */
+.menu-section {
+  margin-bottom: 50px;
+}
+.menu-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffc107;
+  padding-bottom: 5px;
+  color: #111;
+}
+
+/* GRID DE TARJETAS DE PLATO */
+.platos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+.plato-card {
+  width: 240px;
+  background-color: #fffbe6;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plato-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.plato-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.plato-card h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #111;
+  margin: 5px 0;
+}
+.plato-card p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 5px 0 10px;
+  height: 38px;
+  overflow: hidden;
+}
+.plato-card .precio {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 0.95em;
+  margin: 6px 0;
+}
+.plato-card button {
+  border: 2px solid #e74c3c;
+  background: transparent;
+  color: #e74c3c;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.plato-card button:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* MEDIAS QUERIES */
+/* Móvil - muestra hamburguesa y oculta nav-links */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Apilar sólo en móviles muy pequeños */
+@media (max-width: 480px) {
+  .layout {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .sidebar {
+    position: static;
+    top: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .menu-content {
+    margin-left: 0;
+  }
+  .platos-grid {
+    justify-content: center;
+  }
+}
+
+/* MODO OSCURO */
+body.dark-mode {
+  background-color: #121212;    /* Negro profundo */
+  color: #EEEEEE;               /* Texto claro */
+}
+
+/* Header */
+body.dark-mode header {
+  background: #1E1E1E;          /* Gris muy oscuro */
+  color: #FFC107;               /* Dorado suave */
+  border-bottom-color: #665C00; /* Dorado pálido */
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background: #1B1B1B;
+  border-top-color: #333333;
+  border-bottom-color: #333333;
+}
+body.dark-mode .nav-links a {
+  color: #CCCCCC;
+}
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.activo {
+  color: #FFC107;
+}
+
+/* Iconos y botón tema */
+body.dark-mode .btn-tema,
+body.dark-mode .cart-icon,
+body.dark-mode #cart-count {
+  color: #EEEEEE;
+}
+
+/* Botones de autenticación */
+body.dark-mode .auth-buttons .btn-login,
+body.dark-mode .auth-buttons .btn-logout {
+  background: #B71C1C;          /* Rojo oscuro */
+  color: #FFFFFF;
+}
+body.dark-mode .auth-buttons .btn-login:hover,
+body.dark-mode .auth-buttons .btn-logout:hover {
+  background: #880E0E;
+}
+
+/* Sidebar */
+body.dark-mode .sidebar {
+  background: #1E1E1E;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+body.dark-mode .sidebar h3,
+body.dark-mode .sidebar a {
+  color: #EEEEEE;
+}
+body.dark-mode .sidebar a:hover,
+body.dark-mode .sidebar a.active {
+  color: #FFC107;
+}
+
+/* Tarjetas de plato */
+body.dark-mode .plato-card {
+  background-color: #2A2A2A;
+  border-color: #444444;
+}
+body.dark-mode .plato-card h4,
+body.dark-mode .plato-card p,
+body.dark-mode .plato-card .precio {
+  color: #EEEEEE;
+}
+body.dark-mode .plato-card button {
+  border-color: #FFC107;
+  color: #FFC107;
+}
+body.dark-mode .plato-card button:hover {
+  background: #FFC107;
+  color: #2A2A2A;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin · Chifa</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <h1>Panel de Administración</h1>
+    <nav>
+      <button id="btn-products">Productos</button>
+      <button id="btn-invoices">Facturas</button>
+      <button id="btn-logout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Productos -->
+    <section id="section-products" class="admin-section">
+      <h2>Gestión de Productos</h2>
+      <button id="btn-add-product">+ Nuevo Plato</button>
+      <table id="tbl-products">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categoría</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- Sección Facturas -->
+    <section id="section-invoices" class="admin-section hidden">
+      <h2>Facturas Emitidas</h2>
+      <table id="tbl-invoices">
+        <thead>
+          <tr>
+            <th>ID Factura</th>
+            <th>Cliente (UID)</th>
+            <th>Total</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modal Crear/Editar Plato -->
+  <div id="modal-product" class="modal hidden">
+    <form id="form-product" class="modal-content">
+      <h3 id="modal-title">Nuevo Plato</h3>
+      <label>Nombre:
+        <input type="text" name="nombre" required minlength="3" />
+      </label>
+      <label>Precio:
+        <input type="number" name="precio" step="0.01" min="0" required />
+      </label>
+      <label>Stock:
+        <input type="number" name="stock" step="1" min="0" required />
+      </label>
+      <label>Categoría:
+        <select name="categoria" required>
+          <option value="">Seleccione...</option>
+          <option>Combinaciones</option>
+          <option>Entradas</option>
+          <option>Sopas</option>
+          <option>Arroz</option>
+          <option>Bebidas</option>
+          <option>Postres</option>
+          <option>Extras</option>
+        </select>
+      </label>
+      <label>URL Imagen:
+        <input type="url" name="imagen" placeholder="https://..." required />
+      </label>
+      <div class="modal-actions">
+        <button type="submit">Guardar</button>
+        <button type="button" id="btn-cancel">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal Detalles del Plato -->
+  <div id="modal-details" class="modal hidden">
+    <div class="details-box">
+      <h3>Detalles del Plato</h3>
+      <img id="detail-image" src="" alt="Imagen del plato" />
+      <p><strong>ID:</strong> <span id="detail-id"></span></p>
+      <p><strong>Nombre:</strong> <span id="detail-name"></span></p>
+      <p><strong>Precio:</strong> $<span id="detail-price"></span></p>
+      <p><strong>Stock:</strong> <span id="detail-stock"></span></p>
+      <p><strong>Categoría:</strong> <span id="detail-category"></span></p>
+      <button id="btn-close-details">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal Detalle de Factura -->
+  <div id="modal-invoice" class="modal hidden">
+    <div class="details-box">
+      <h3>Factura <span id="inv-id"></span></h3>
+      <p><strong>Cliente:</strong> <span id="inv-user"></span></p>
+      <p><strong>Total:</strong> $<span id="inv-total"></span></p>
+      <p><strong>Fecha:</strong> <span id="inv-date"></span></p>
+      <table id="tbl-inv-details">
+        <thead>
+          <tr><th>Producto</th><th>Cant.</th><th>Precio U.</th><th>Subtotal</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="btn-close-inv">Cerrar</button>
+    </div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

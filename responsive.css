@@ -1,0 +1,288 @@
+/* ——— Adaptabilidad general ——— */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .texto-izquierda {
+    max-width: 100%;
+  }
+
+  .imagen-derecha img {
+    margin: 20px auto 0 auto;
+    width: 80%;
+  }
+
+  .boton-pizarra {
+    width: 80%;
+  }
+
+  /* About */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-img img {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Especialidades */
+  .menu-especial {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .plato {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  /* ¿Por qué elegirnos? */
+  .elegirnos-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-elegir {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .porque-elegirnos h2 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .porque-elegirnos h2 span {
+    font-size: 0.8em;
+  }
+  .layout {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+  }
+
+  .menu-content {
+    width: 100%;
+  }
+
+  .platos-grid {
+    justify-content: center;
+  }
+
+  .plato-card {
+    width: 90%;
+    max-width: 320px;
+  }
+  .sidebar.collapsed {
+    display: none;
+  }
+}
+
+/* ——— Adaptabilidad para móviles pequeños ——— */
+@media (max-width: 480px) {
+
+  /* Hero Banner */
+  .titulo-banner {
+    font-size: 2em;
+  }
+
+  .descripcion-banner {
+    font-size: 1em;
+  }
+
+  .boton-pizarra {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  /* About */
+  .titulo-about {
+    font-size: 2em;
+  }
+
+  /* ¿Por qué elegirnos? */
+  .porque-elegirnos h2 {
+    font-size: 1.8em;
+    line-height: 1.2;
+  }
+
+  .porque-elegirnos h2 span {
+    font-size: 0.7em;
+  }
+
+  .card-elegir {
+    padding: 20px 15px;
+  }
+
+  .icono-svg svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+
+.plato-card img {
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+ }
+}
+@media (max-width: 600px) {
+  .testimonio-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cliente-foto {
+    margin: 0 0 15px 0;
+  }
+}
+
+/* ——— Efectos de hover generales ——— */
+.icono-svg svg {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icono-svg svg:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* CONTACTO */
+  .horario-cajas {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .horario-box {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .reproductor-wrap {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  /* RESERVAR MESA */
+  .reserva-contenedor {
+    width: 90%;
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  .formulario-reserva select,
+  .formulario-reserva input,
+  .formulario-reserva textarea {
+    font-size: 0.95em;
+  }
+
+  .btn-reservar {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .nota {
+    font-size: 0.85em;
+  }
+
+  /* GENERAL */
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .horario-cajas {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .about-container {
+    display: block;          /* dejar de ser grid */
+    padding: 0 1rem;
+  }
+
+  .about-text,
+  .about-img {
+    width: 100%;
+    margin-bottom: 2rem;     /* espacio entre bloques */
+  }
+
+  .about-img {
+    text-align: center;      /* centrar la imagen */
+  }
+
+  .about-img img {
+    max-width: 90%;
+    height: auto;
+  }
+}

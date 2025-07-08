@@ -1,0 +1,188 @@
+/* carrito.css */
+
+/* ================================
+   RESET Y BASE DEL CONTENEDOR
+   ================================ */
+.carrito-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================================
+   HEADER DE LA PÁGINA
+   ================================ */
+header h1 {
+  font-family: 'Shanghai', serif;
+  font-size: 2.2rem;
+  color: #7b1e1e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   BOTÓN VOLVER
+   ================================ */
+.btn-volver {
+  align-self: flex-start;
+  background: transparent;
+  border: 2px solid #7b1e1e;
+  color: #7b1e1e;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-volver:hover {
+  background: #7b1e1e;
+  color: #fff;
+}
+
+/* ================================
+   LISTA DE ARTÍCULOS
+   ================================ */
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.item-carrito {
+  display: flex;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  align-items: center;
+}
+.producto-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.producto-info {
+  flex: 1;
+}
+.producto-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #111;
+}
+.producto-info p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ================================
+   CONTROLES DE CANTIDAD
+   ================================ */
+.cantidad-controles {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+.cantidad-controles button {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #e74c3c;
+  background: transparent;
+  color: #e74c3c;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cantidad-controles button:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+.cantidad-controles span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ================================
+   TOTALES
+   ================================ */
+.carrito-total {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-size: 1rem;
+  color: #111;
+}
+.carrito-total p {
+  margin: 8px 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ================================
+   BOTONES DE ACCIÓN
+   ================================ */
+.carrito-botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.carrito-botones button {
+  flex: 1 1 160px;
+  background-color: #ec6b2e;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.carrito-botones .btn-confirmar {
+  background-color: #28a745;
+}
+.carrito-botones .btn-vaciar {
+  background-color: #dc3545;
+}
+.carrito-botones button:hover {
+  opacity: 0.9;
+}
+
+/* ================================
+   MENSAJE DE CARRITO VACÍO
+   ================================ */
+.contenedor-carrito p {
+  text-align: center;
+  padding: 40px 0;
+  color: #777;
+  font-style: italic;
+}
+
+/* ================================
+   MEDIA QUERIES
+   ================================ */
+@media (max-width: 600px) {
+  .item-carrito {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .producto-img img {
+    width: 100%;
+    height: auto;
+  }
+  .carrito-botones {
+    flex-direction: column;
+  }
+}
