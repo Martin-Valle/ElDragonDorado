@@ -20,7 +20,36 @@
     <!-- Sección Productos -->
     <section id="section-products" class="admin-section">
       <h2>Gestión de Productos</h2>
+
+      <!-- Filtros y orden -->
+      <div class="filtros">
+        <select id="filter-category">
+          <option value="">— Todas las categorías —</option>
+          <option>Combinaciones</option>
+          <option>Entradas</option>
+          <option>Sopas</option>
+          <option>Arroz</option>
+          <option>Bebidas</option>
+          <option>Postres</option>
+          <option>Extras</option>
+        </select>
+
+        <select id="sort-stock">
+          <option value="">— Ordenar stock —</option>
+          <option value="stock_desc">Stock: más ↓</option>
+          <option value="stock_asc">Stock: menos ↓</option>
+        </select>
+
+        <select id="sort-name">
+          <option value="">— Ordenar nombre —</option>
+          <option value="name_asc">A → Z</option>
+          <option value="name_desc">Z → A</option>
+        </select>
+        
+      </div>
+
       <button id="btn-add-product">+ Nuevo Plato</button>
+
       <table id="tbl-products">
         <thead>
           <tr>
@@ -38,6 +67,25 @@
     </section>
 
     <!-- Sección Facturas -->
+     <!-- Sección Facturas -->
+<section id="section-invoices" class="admin-section hidden">
+  <h2>Facturas Emitidas</h2>
+
+
+
+  <table id="tbl-invoices">
+    <thead>
+      <tr>
+        <th>ID Factura</th>
+        <th>Cliente (UID)</th>
+        <th>Total</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
     <section id="section-invoices" class="admin-section hidden">
       <h2>Facturas Emitidas</h2>
       <table id="tbl-invoices">
@@ -47,6 +95,7 @@
             <th>Cliente (UID)</th>
             <th>Total</th>
             <th>Fecha</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -112,7 +161,12 @@
       <p><strong>Fecha:</strong> <span id="inv-date"></span></p>
       <table id="tbl-inv-details">
         <thead>
-          <tr><th>Producto</th><th>Cant.</th><th>Precio U.</th><th>Subtotal</th></tr>
+          <tr>
+            <th>Producto</th>
+            <th>Cant.</th>
+            <th>Precio U.</th>
+            <th>Subtotal</th>
+          </tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -120,6 +174,7 @@
     </div>
   </div>
 
-  <script type="module" src="admin.js"></script>
+  <!-- Controlador -->
+  <script type="module" src="../controllers/admin.js"></script>
 </body>
 </html>
